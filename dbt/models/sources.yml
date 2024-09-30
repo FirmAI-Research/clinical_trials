@@ -1,0 +1,17 @@
+
+version: 2
+
+sources:
+  - name: raw_data
+    schema: raw_data
+    tables:
+      - name: raw_clinicaltrials_studies
+      - name: raw_clinicaltrials_studies__protocol_section__conditions_module__conditions
+      - name: raw_clinicaltrials_studies__protocol_section__sponsor_collaborators_module__collaborators
+      - name: raw_clinicaltrials_studies__protocol_section__contacts_locations_module__locations
+      - name: raw_clinicaltrials_studies__protocol_section__eligibility_module__eligibility_criteria
+      - name: raw_clinicaltrials_studies__protocol_section__arms_interventions_module__interventions
+      - name: raw_clinicaltrials_studies__results_section__adverse_events_module__event_groups
+      - name: raw_clinicaltrials_studies__results_section__baseline_characteristics_module__measures
+      - name: raw_clinicaltrials_studies__results_section__outcome_measures_module__outcome_measures
+      - name: raw_clinicaltrials_studies__results_section__more_info_module__certain_agreement__pi_sponsor_employee

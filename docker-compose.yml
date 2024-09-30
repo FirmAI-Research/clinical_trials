@@ -1,0 +1,21 @@
+
+version: '3.8'
+
+services:
+  pipeline:
+    build: .
+    container_name: clinical_trials_pipeline
+    volumes:
+      - .:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command: python dlt_pipeline.py
+
+  dbt:
+    build: .
+    container_name: clinical_trials_dbt
+    volumes:
+      - .:/app
+    environment:
+      - DBT_PROFILES_DIR=/app/dbt
+    command: dbt run

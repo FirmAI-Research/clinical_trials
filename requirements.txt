@@ -1,0 +1,11 @@
+
+dlt
+duckdb
+dbt-core
+dbt-duckdb
+openai
+scikit-learn
+requests
+streamlit
+duckcli
+openai

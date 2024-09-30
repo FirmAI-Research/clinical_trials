@@ -1,0 +1,22 @@
+
+name: 'clinical_trials'
+version: '1.0'
+profile: 'default'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  clinical_trials:
+    raw_data:
+      +materialized: view
+    marts:
+      +materialized: table
+
+sources:
+  raw_data:
+    schema: "raw_data_staging"  # Updating the schema to match DuckDB format
+    database: "{{ env_var('DBT_DUCKDB_PATH', 'clinical_trials') }}"
+    tables:
+      - name: "raw_clinicaltrials_studies"

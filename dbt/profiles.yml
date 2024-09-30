@@ -1,0 +1,7 @@
+
+default:
+  outputs:
+    dev:
+      type: duckdb
+      path: "./clinical_trials.duckdb"
+  target: dev
